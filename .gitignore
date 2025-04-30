@@ -1,0 +1,31 @@
+# Ignore virtual environment directory
+venv/
+env/
+*.egg-info/
+*.pyo
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore Flask-related files and directories
+instance/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Ignore Flask migrations folder (if using Flask-Migrate)
+migrations/
+
+# Ignore egg info files
+*.egg-info/
+
+# Ignore IDE/editor files (if you use an IDE like PyCharm or VS Code)
+.idea/
+.vscode/
+
+# Ignore Python bytecode files
+__pycache__/
