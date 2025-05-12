@@ -45,5 +45,16 @@ def index():
         result = f"{percent}% {phrase}"
     return render_template("index.html", result=result)
 
+# Required for Vercel
+def vercel_handler(request):
+    from flask import Response
+    with app.app_context():
+        response = app.full_dispatch_request()
+        return Response(
+            response.get_data(),
+            status=response.status_code,
+            headers=dict(response.headers)
+        )
+
 if __name__ == "__main__":
     app.run(debug=True)
